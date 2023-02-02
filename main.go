@@ -31,7 +31,7 @@ func scanIP(i int, ip string, wg *sync.WaitGroup) {
 	}
 }
 func main() {
-	ip := "51.81.153.113"
+	ip := "host"
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	wg := sync.WaitGroup{}
 	for i := 0; i < 65535; i++ {
