@@ -21,12 +21,6 @@ func scanIP(i int, ip string, wg *sync.WaitGroup) {
 	}
 	if err == nil {
 		fmt.Println("接続できました", port)
-		file, err := os.Create("portlist.txt")
-		if err != nil {
-			fmt.Println("書き込みに失敗")
-			return
-		}
-		file.WriteString(port + "\n")
 		return
 	}
 }
